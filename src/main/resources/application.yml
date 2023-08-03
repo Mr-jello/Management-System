@@ -1,0 +1,54 @@
+#server:
+#  port: 9000
+
+##定义对象/map集合
+#user:
+#    name: zhangsan
+#    age: 18
+#    friends:
+#        - lisi
+#        - wangwu
+#    maps:
+#        k1: v1
+#        k2: v2
+
+#定义数组
+#pets:
+#    - cat
+#    - dog
+#    - pig
+
+
+#config for database
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://xxx.xxx.xx.xx:3306/tilas
+    username: jason
+    password: xxxxxx
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+#config for mybatis
+mybatis:
+  configuration:
+    #config for mybatis log
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #config for mybatis camelize
+    map-underscore-to-camel-case: true
+
+#config for ali oss
+aliyun:
+  oss:
+    endpoint: xxxxxx
+    accessKeyId: xxxxxx
+    accessKeySecret: xxxxxx
+    bucketName: xxxxxx
+
+#sprig transaction log
+logging:
+  level:
+    org.springframework.jdbc.support.jdbcTransactionManager: debug
+
